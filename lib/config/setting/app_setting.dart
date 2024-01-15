@@ -1,4 +1,4 @@
 class AppSetting {
   static const String appName = "Eslam";
-  static const String fontFamliy = "";
+  static const String fontFamliy = "Inter";
 }
