@@ -1,5 +1,8 @@
 import 'package:cv_flutter/view/home/ui/about_widget.dart';
+import 'package:cv_flutter/view/home/ui/education_widget.dart';
 import 'package:cv_flutter/view/home/ui/header_widget.dart';
+import 'package:cv_flutter/view/home/ui/projects_widget.dart';
+import 'package:cv_flutter/view/home/ui/skills_widget.dart';
 import 'package:cv_flutter/view/home/ui/work_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +13,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     var theme = Theme.of(context);
+    bool isSmall = width < 900;
     return Material(
       child: Row(
         children: [
-          width < 900
+          isSmall
               ? const SizedBox()
               : Expanded(
                   child: Container(
@@ -36,13 +40,19 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     AboutWidget(theme: theme),
                     const SizedBox(height: 20),
-                    WorkWidget(theme: theme)
+                    WorkWidget(theme: theme),
+                    const SizedBox(height: 20),
+                    EducationWidget(theme: theme),
+                    const SizedBox(height: 20),
+                    SkillsWidget(theme: theme),
+                    const SizedBox(height: 20),
+                    ProjectsWidget(theme: theme, isSmall: isSmall),
                   ],
                 ),
               ),
             ),
           ),
-          width < 900
+          isSmall
               ? const SizedBox()
               : Expanded(
                   child: Container(

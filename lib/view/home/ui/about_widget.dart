@@ -12,7 +12,6 @@ class AboutWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(DummyData.about, style: theme.textTheme.bodyLarge),
-        const SizedBox(height: 10),
         Text(DummyData.aboutValue, style: theme.textTheme.bodyMedium),
       ],
     );

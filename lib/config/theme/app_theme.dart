@@ -32,6 +32,11 @@ class AppTheme {
           fontSize: 10,
           color: Color(0xff111827),
         ),
+        displayMedium: const TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 10,
+          color: Colors.white,
+        ),
         displayLarge: const TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 12,
