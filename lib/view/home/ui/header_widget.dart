@@ -1,50 +1,83 @@
 import 'package:cv_flutter/config/data/dummy_data.dart';
+import 'package:cv_flutter/widget/icon_text/build_icon_text.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HeaderWidget extends StatelessWidget {
-  const HeaderWidget({super.key});
+  const HeaderWidget({super.key, required this.theme});
+  final ThemeData theme;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                DummyData.name,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  color: Colors.black,
+        Text(DummyData.name, style: theme.textTheme.bodyLarge),
+        const SizedBox(height: 15),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 400,
+                    child: Text(
+                      DummyData.bio,
+                      style: theme.textTheme.bodyMedium,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  BuildIconText(
+                    theme: theme,
+                    icon: Icons.language_outlined,
+                    onTap: () {},
+                    text: "Lehi, Utah, United States (MST)",
+                  ),
+                  const SizedBox(height: 5),
+                  BuildIconText(
+                    theme: theme,
+                    icon: Icons.phone,
+                    onTap: () {},
+                    text: "+20 1032390247",
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                image: const DecorationImage(
+                  image: AssetImage("assets/image/avater.jpg"),
+                  fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 5),
-              SizedBox(
-                width: 400,
-                child: Text(
-                  DummyData.bio,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12,
-                    height: 2,
-                    letterSpacing: 1,
-                    wordSpacing: 1,
-                    color: Color(0xff6B7280),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        //* links
+        SizedBox(
+          height: 40,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {},
+                child: const Card(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+                    child: Icon(FontAwesomeIcons.xTwitter, size: 15),
                   ),
                 ),
-              ),
-              
-            ],
-          ),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(10),
+              );
+            },
           ),
         ),
       ],
