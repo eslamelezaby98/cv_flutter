@@ -22,6 +22,24 @@ class AppTheme {
           fontSize: 24,
           color: AppColor.header,
         ),
+        bodySmall: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 16,
+          color: AppColor.header,
+        ),
+        displaySmall: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 10,
+          color: Color(0xff111827),
+        ),
+        displayLarge: const TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+          height: 1.5,
+          letterSpacing: 1,
+          wordSpacing: 2,
+          color: Color(0xff111827),
+        ),
         bodyMedium: TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 12,

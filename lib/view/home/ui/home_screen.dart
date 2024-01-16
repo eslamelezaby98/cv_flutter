@@ -1,5 +1,6 @@
 import 'package:cv_flutter/view/home/ui/about_widget.dart';
 import 'package:cv_flutter/view/home/ui/header_widget.dart';
+import 'package:cv_flutter/view/home/ui/work_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,6 +35,8 @@ class HomeScreen extends StatelessWidget {
                     HeaderWidget(theme: theme),
                     const SizedBox(height: 20),
                     AboutWidget(theme: theme),
+                    const SizedBox(height: 20),
+                    WorkWidget(theme: theme)
                   ],
                 ),
               ),
