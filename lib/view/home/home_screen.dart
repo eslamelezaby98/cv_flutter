@@ -1,9 +1,9 @@
-import 'package:cv_flutter/view/home/ui/about_widget.dart';
-import 'package:cv_flutter/view/home/ui/education_widget.dart';
-import 'package:cv_flutter/view/home/ui/header_widget.dart';
-import 'package:cv_flutter/view/home/ui/projects_widget.dart';
-import 'package:cv_flutter/view/home/ui/skills_widget.dart';
-import 'package:cv_flutter/view/home/ui/work_widget.dart';
+import 'package:cv_flutter/view/home/widget/about_widget.dart';
+import 'package:cv_flutter/view/home/widget/education_widget.dart';
+import 'package:cv_flutter/view/home/widget/header_widget.dart';
+import 'package:cv_flutter/view/home/widget/projects_widget.dart';
+import 'package:cv_flutter/view/home/widget/skills_widget.dart';
+import 'package:cv_flutter/view/home/widget/work_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

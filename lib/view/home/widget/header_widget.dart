@@ -1,5 +1,5 @@
 import 'package:cv_flutter/config/data/dummy_data.dart';
-import 'package:cv_flutter/widget/icon_text/build_icon_text.dart';
+import 'package:cv_flutter/shared/icon_text/build_icon_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,6 +42,13 @@ class HeaderWidget extends StatelessWidget {
                     icon: Icons.phone,
                     onTap: () {},
                     text: "+20 1032390247",
+                  ),
+                  const SizedBox(height: 5),
+                  BuildIconText(
+                    theme: theme,
+                    icon: Icons.mail_outline,
+                    onTap: () {},
+                    text: "eslamlelezaby98@gmail.com",
                   ),
                 ],
               ),

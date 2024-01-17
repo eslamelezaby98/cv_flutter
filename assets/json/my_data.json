@@ -1,0 +1,87 @@
+{
+    "header":{
+      "name":"Eslam Elezaby",
+      "bio":"",
+      "email":"eslamelezaby98@gmail.com",
+      "location":{
+       "address":"Egypt",
+       "locationX":"",
+       "locationY":"",
+      },
+      "phone":{
+        "code":"+20",
+        "number":"1032390246",
+      }
+    },
+    "about":{
+      "title": "About",
+      "body": "Results-driven Flutter developer with 2 years of experience in developing and delivering high-quality
+              mobile applications. Proficient in utilizing the Flutter framework to create cross-platform applications
+              for iOS and Android platforms. Skilled in front-end development, UI/UX design, and integrating APIs to
+              enhance application functionality. Strong problem-solving abilities and a passion for delivering efficient
+              and user-friendly mobile experiences"
+    },
+    "work_Experience":{
+      "title": "Work Experience",
+      "experience":[
+        {
+          "company_name":"Stork",
+          "country":"Turkey",
+          "company_site":"",
+          "job_title":"Mobile App Developer",
+          "type":"Remote",
+          "start":"2023",
+          "end":"Present",
+          "description":"I played a pivotal role in creating and maintaining mobile applications for Stork company. Working
+                        remotely, I effectively collaborated with cross-functional teams to deliver high-quality mobile applications
+                        and contribute to the success of various projects",
+        },
+        {
+          "company_name":"ECMPP",
+          "country":"Egypt",
+          "company_site":"",
+          "job_title":"Mobile App Developer",
+          "type":"Full Time",
+          "start":"2022",
+          "end":"2024",
+          "description":"Implemented UI/UX designs, translating wireframes and mockups into interactive and visually appealing
+                        mobile interfaces. We integrated RESTful APIs to fetch and display real-time dynamic data, improving application
+                        functionality and user experience",
+        },
+        {
+          "company_name":"Freelancer",
+          "country":"",
+          "company_site":"freelancer.com",
+          "job_title":"Mobile App Developer",
+          "type":"Freelancer",
+          "start":"2020",
+          "end":"2022",
+          "description":"Collaborated closely with clients to understand project requirements, translate concepts into technical
+                        specifications, and provide regular progress updates. Actively engaged in client communication, addressing feedback, and incorporating requested changes
+                        to meet their specific requirements.",
+        },
+      ]
+    },
+    "education":{
+      "title": "Education",
+      "university_name":"FACULTY OF COMMERCE - ALEXANDRIA UNIVERSITY",
+      "department":"Collage degree in Marketing",
+      "start":"2016",
+      "end":"2020"
+    },
+    "skills":[
+      "MVC / MVVM"," Git / GitHub","API","Firebase","Flutter","Dart","Agora","Bloc",
+    ],
+    "projects":[
+      {
+        "name":"Zone",
+        "description":"",
+        "google_play":"",
+        "app_store":"",
+        "site":"",
+        "skills":[
+          "Flutter" , "Dart" , "Agora","Firebase","Pusher",
+        ]
+      }
+    ]
+}
