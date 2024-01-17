@@ -24,7 +24,7 @@ class SkillsWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(3.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 15, 15, 15),
+                      color: const Color.fromARGB(255, 55, 54, 54),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Padding(
