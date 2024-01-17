@@ -11,7 +11,7 @@ class BuildBadget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return text.isEmpty ? const SizedBox(): Card(
       color: const Color(0xffF8F8FA),
       shape: RoundedRectangleBorder(
         side: BorderSide.none,

@@ -2,6 +2,8 @@ import 'package:cv_flutter/config/setting/cv_data.dart';
 import 'package:cv_flutter/shared/shape/gray_shape.dart';
 import 'package:flutter/material.dart';
 
+import '../../../config/launch/app_luncher.dart';
+
 class WorkWidget extends StatelessWidget {
   const WorkWidget({super.key, required this.theme});
   final ThemeData theme;
@@ -30,9 +32,14 @@ class WorkWidget extends StatelessWidget {
                       Expanded(
                         child: Row(
                           children: [
-                            Text(
-                              work.companyName,
-                              style: theme.textTheme.bodySmall,
+                            InkWell(
+                              onTap: () {
+                                AppLaunch.openLink(work.companySite);
+                              },
+                              child: Text(
+                                work.companyName,
+                                style: theme.textTheme.bodySmall,
+                              ),
                             ),
                             const SizedBox(width: 5),
                             BuildBadget(theme: theme, text: work.country),

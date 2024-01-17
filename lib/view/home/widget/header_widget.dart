@@ -1,3 +1,4 @@
+import 'package:cv_flutter/config/launch/app_luncher.dart';
 import 'package:cv_flutter/shared/icon_text/build_icon_text.dart';
 import 'package:flutter/material.dart';
 import '../../../config/setting/cv_data.dart';
@@ -33,7 +34,9 @@ class HeaderWidget extends StatelessWidget {
                     theme: theme,
                     icon: Icons.language_outlined,
                     onTap: () {
-                      //TODO:
+                      AppLaunch.openLink(
+                        'https://www.google.com/maps/search/?api=1&query=${myData.header.location.locationX},${myData.header.location.locationY}',
+                      );
                     },
                     text: myData.header.location.address,
                   ),
@@ -42,7 +45,9 @@ class HeaderWidget extends StatelessWidget {
                     theme: theme,
                     icon: Icons.phone,
                     onTap: () {
-                      //TODO:
+                      AppLaunch.openLink(
+                        "tel:${myData.header.phone.code}${myData.header.phone.number}",
+                      );
                     },
                     text:
                         "${myData.header.phone.code} ${myData.header.phone.number}",
@@ -52,7 +57,7 @@ class HeaderWidget extends StatelessWidget {
                     theme: theme,
                     icon: Icons.mail_outline,
                     onTap: () {
-                      //TODO:
+                      AppLaunch.openLink('mailto:${myData.header.email}');
                     },
                     text: myData.header.email,
                   ),
@@ -84,7 +89,7 @@ class HeaderWidget extends StatelessWidget {
               var link = myData.header.links[index];
               return InkWell(
                 onTap: () {
-                  //TODO:
+                  AppLaunch.openLink(link.url);
                 },
                 child: Card(
                   child: Padding(

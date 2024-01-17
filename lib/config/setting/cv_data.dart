@@ -34,6 +34,18 @@ MyData myData = MyData(
         "https://medium.com/@eslamelezaby98",
         icon: FontAwesomeIcons.medium,
       ),
+      Links(
+        "https://play.google.com/store/apps/developer?id=ecmpp",
+        icon: FontAwesomeIcons.googlePlay,
+      ),
+      Links(
+        "https://play.google.com/store/apps/developer?id=Troond.com",
+        icon: FontAwesomeIcons.googlePlay,
+      ),
+      Links(
+        "https://apps.apple.com/us/developer/ugetic-llc/id1675647077",
+        icon: FontAwesomeIcons.appStore,
+      ),
     ],
   ),
   about: About(
@@ -55,7 +67,7 @@ MyData myData = MyData(
         jobTitle: "Mobile App Developer",
         start: "2023",
         end: "Present",
-        companySite: "",
+        companySite: "https://www.stoorks.com/",
         description:
             "I played a pivotal role in creating and maintaining mobile applications for Stork company. Working"
             "remotely, I effectively collaborated with cross-functional teams to deliver high-quality mobile applications"

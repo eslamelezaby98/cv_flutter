@@ -1,7 +1,10 @@
+import 'package:cv_flutter/config/launch/app_luncher.dart';
 import 'package:cv_flutter/config/setting/cv_data.dart';
+import 'package:cv_flutter/shared/icon/build_icon.dart';
 import 'package:cv_flutter/shared/shape/gray_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProjectsWidget extends StatelessWidget {
   const ProjectsWidget({
@@ -37,9 +40,14 @@ class ProjectsWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Wrap(
                     children: [
-                      Text(
-                        myData.projects.items[i].name,
-                        style: theme.textTheme.bodySmall,
+                      InkWell(
+                        onTap: () {
+                          AppLaunch.openLink(myData.projects.items[i].link);
+                        },
+                        child: Text(
+                          myData.projects.items[i].name,
+                          style: theme.textTheme.bodySmall,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -48,17 +56,40 @@ class ProjectsWidget extends StatelessWidget {
                           style: theme.textTheme.labelLarge,
                         ),
                       ),
-                      Wrap(
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: Wrap(
+                          children: [
+                            ...List.generate(
+                              myData.projects.items[i].badgets.length,
+                              (index) {
+                                return BuildBadget(
+                                  theme: theme,
+                                  text: myData.projects.items[i].badgets[index],
+                                );
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                      Row(
                         children: [
-                          ...List.generate(
-                            myData.projects.items[i].badgets.length,
-                            (index) {
-                              return BuildBadget(
-                                theme: theme,
-                                text: myData.projects.items[i].badgets[index],
-                              );
-                            },
-                          )
+                          BuildIcon(
+                            icon: FontAwesomeIcons.googlePlay,
+                            url: myData.projects.items[i].googlePlay,
+                          ),
+                          BuildIcon(
+                            icon: FontAwesomeIcons.appStore,
+                            url: myData.projects.items[i].appStore,
+                          ),
+                          BuildIcon(
+                            icon: FontAwesomeIcons.windows,
+                            url: myData.projects.items[i].windows,
+                          ),
+                          BuildIcon(
+                            icon: FontAwesomeIcons.link,
+                            url: myData.projects.items[i].link,
+                          ),
                         ],
                       ),
                     ],

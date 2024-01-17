@@ -42,10 +42,10 @@ class Phone {
 }
 
 class Links {
-  final String name;
+  final String url;
   final IconData icon;
   Links(
-    this.name, {
+    this.url, {
     this.icon = Icons.language_outlined,
   });
 }

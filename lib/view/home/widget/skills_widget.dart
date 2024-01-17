@@ -10,7 +10,10 @@ class SkillsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(myData.skills.title, style: theme.textTheme.bodyLarge),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Text(myData.skills.title, style: theme.textTheme.bodyLarge),
+        ),
         Wrap(
           children: [
             ...List.generate(
