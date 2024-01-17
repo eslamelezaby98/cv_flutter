@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../config/launch/app_luncher.dart';
 
 class WorkWidget extends StatelessWidget {
-  const WorkWidget({super.key, required this.theme});
+  const WorkWidget({super.key, required this.theme, required this.isSmall});
   final ThemeData theme;
+  final bool isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +48,20 @@ class WorkWidget extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Text(
-                        "${work.start}- ${work.end}",
-                        style: theme.textTheme.bodyMedium,
-                      ),
+                      isSmall
+                          ? const SizedBox()
+                          : Text(
+                              "${work.start}- ${work.end}",
+                              style: theme.textTheme.bodyMedium,
+                            ),
                     ],
                   ),
+                  isSmall
+                      ? Text(
+                          "${work.start}- ${work.end}",
+                          style: theme.textTheme.bodyMedium,
+                        )
+                      : const SizedBox(),
                   const SizedBox(height: 2),
                   Text(work.jobTitle, style: theme.textTheme.displayLarge),
                   const SizedBox(height: 2),

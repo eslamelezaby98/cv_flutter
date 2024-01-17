@@ -34,13 +34,16 @@ class HomeScreen extends StatelessWidget {
                 height: double.infinity,
                 color: Colors.white,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 60, left: 60, top: 20),
+                  padding: const EdgeInsets.only(top: 20,right: 10,left: 10),
                   child: ListView(
                     children: [
                       HeaderWidget(theme: theme),
                       AboutWidget(theme: theme),
-                      WorkWidget(theme: theme),
-                      EducationWidget(theme: theme),
+                      WorkWidget(theme: theme, isSmall: isSmall),
+                      EducationWidget(
+                        theme: theme,
+                        isSmall: isSmall,
+                      ),
                       SkillsWidget(theme: theme),
                       ProjectsWidget(theme: theme, isSmall: isSmall),
                     ],

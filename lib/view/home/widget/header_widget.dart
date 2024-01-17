@@ -19,11 +19,12 @@ class HeaderWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
+              flex: 4,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 400,
+                    width: 600,
                     child: Text(
                       myData.header.bio,
                       style: theme.textTheme.bodyMedium,
@@ -72,7 +73,7 @@ class HeaderWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
                   image: AssetImage("assets/image/avater.jpg"),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),

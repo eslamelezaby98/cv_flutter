@@ -2,8 +2,13 @@ import 'package:cv_flutter/config/setting/cv_data.dart';
 import 'package:flutter/material.dart';
 
 class EducationWidget extends StatelessWidget {
-  const EducationWidget({super.key, required this.theme});
+  const EducationWidget({
+    super.key,
+    required this.theme,
+    required this.isSmall,
+  });
   final ThemeData theme;
+  final bool isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +35,20 @@ class EducationWidget extends StatelessWidget {
                         item.universityName,
                         style: theme.textTheme.bodySmall,
                       ),
-                      Text(
-                        "${item.start} - ${item.end}",
-                        style: theme.textTheme.bodyMedium,
-                      ),
+                      isSmall
+                          ? const SizedBox()
+                          : Text(
+                              "${item.start} - ${item.end}",
+                              style: theme.textTheme.bodyMedium,
+                            ),
                     ],
                   ),
+                  !isSmall
+                      ? const SizedBox()
+                      : Text(
+                          "${item.start} - ${item.end}",
+                          style: theme.textTheme.bodyMedium,
+                        ),
                   const SizedBox(height: 5),
                   Text(
                     item.specialization,
