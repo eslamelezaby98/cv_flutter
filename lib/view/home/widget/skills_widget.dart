@@ -1,3 +1,4 @@
+import 'package:cv_flutter/config/setting/cv_data.dart';
 import 'package:flutter/material.dart';
 
 class SkillsWidget extends StatelessWidget {
@@ -9,12 +10,13 @@ class SkillsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Skills", style: theme.textTheme.bodyLarge),
+        Text(myData.skills.title, style: theme.textTheme.bodyLarge),
         Wrap(
           children: [
             ...List.generate(
-              15,
+              myData.skills.items.length,
               (index) {
+                var skill = myData.skills.items[index];
                 return Padding(
                   padding: const EdgeInsets.all(3.0),
                   child: Container(
@@ -25,7 +27,7 @@ class SkillsWidget extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(6.0),
                       child: Text(
-                        "GitOps",
+                        skill,
                         style: theme.textTheme.displayMedium,
                       ),
                     ),
@@ -35,6 +37,7 @@ class SkillsWidget extends StatelessWidget {
             )
           ],
         ),
+        const SizedBox(height: 20),
       ],
     );
   }

@@ -34,10 +34,10 @@ class Location {
 
 class Phone {
   final String code;
-  final String phone;
+  final String number;
   Phone({
     required this.code,
-    required this.phone,
+    required this.number,
   });
 }
 

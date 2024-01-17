@@ -45,6 +45,11 @@ class AppTheme {
           wordSpacing: 2,
           color: Color(0xff111827),
         ),
+        labelLarge: TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+          color: AppColor.text,
+        ),
         bodyMedium: TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 12,

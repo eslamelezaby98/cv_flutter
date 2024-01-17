@@ -1,6 +1,5 @@
+import 'package:cv_flutter/config/setting/cv_data.dart';
 import 'package:flutter/material.dart';
-
-import '../../../config/data/dummy_data.dart';
 
 class AboutWidget extends StatelessWidget {
   const AboutWidget({super.key, required this.theme});
@@ -11,8 +10,9 @@ class AboutWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(DummyData.about, style: theme.textTheme.bodyLarge),
-        Text(DummyData.aboutValue, style: theme.textTheme.bodyMedium),
+        Text(myData.about.title, style: theme.textTheme.bodyLarge),
+        Text(myData.about.body, style: theme.textTheme.bodyMedium),
+        const SizedBox(height: 20),
       ],
     );
   }

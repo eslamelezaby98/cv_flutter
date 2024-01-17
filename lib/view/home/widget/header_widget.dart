@@ -1,7 +1,6 @@
-import 'package:cv_flutter/config/data/dummy_data.dart';
 import 'package:cv_flutter/shared/icon_text/build_icon_text.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../../config/setting/cv_data.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key, required this.theme});
@@ -12,7 +11,7 @@ class HeaderWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(DummyData.name, style: theme.textTheme.bodyLarge),
+        Text(myData.header.name, style: theme.textTheme.bodyLarge),
         const SizedBox(height: 15),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +24,7 @@ class HeaderWidget extends StatelessWidget {
                   SizedBox(
                     width: 400,
                     child: Text(
-                      DummyData.bio,
+                      myData.header.bio,
                       style: theme.textTheme.bodyMedium,
                     ),
                   ),
@@ -33,22 +32,29 @@ class HeaderWidget extends StatelessWidget {
                   BuildIconText(
                     theme: theme,
                     icon: Icons.language_outlined,
-                    onTap: () {},
-                    text: "Lehi, Utah, United States (MST)",
+                    onTap: () {
+                      //TODO:
+                    },
+                    text: myData.header.location.address,
                   ),
                   const SizedBox(height: 5),
                   BuildIconText(
                     theme: theme,
                     icon: Icons.phone,
-                    onTap: () {},
-                    text: "+20 1032390247",
+                    onTap: () {
+                      //TODO:
+                    },
+                    text:
+                        "${myData.header.phone.code} ${myData.header.phone.number}",
                   ),
                   const SizedBox(height: 5),
                   BuildIconText(
                     theme: theme,
                     icon: Icons.mail_outline,
-                    onTap: () {},
-                    text: "eslamlelezaby98@gmail.com",
+                    onTap: () {
+                      //TODO:
+                    },
+                    text: myData.header.email,
                   ),
                 ],
               ),
@@ -73,20 +79,24 @@ class HeaderWidget extends StatelessWidget {
           height: 40,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: myData.header.links.length,
             itemBuilder: (context, index) {
+              var link = myData.header.links[index];
               return InkWell(
-                onTap: () {},
-                child: const Card(
+                onTap: () {
+                  //TODO:
+                },
+                child: Card(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-                    child: Icon(FontAwesomeIcons.xTwitter, size: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Icon(link.icon, size: 15),
                   ),
                 ),
               );
             },
           ),
         ),
+        const SizedBox(height: 20),
       ],
     );
   }

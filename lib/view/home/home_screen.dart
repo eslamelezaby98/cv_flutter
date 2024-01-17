@@ -14,54 +14,51 @@ class HomeScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     var theme = Theme.of(context);
     bool isSmall = width < 900;
-    return Material(
-      child: Row(
-        children: [
-          isSmall
-              ? const SizedBox()
-              : Expanded(
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.white,
+    return SelectionArea(
+      child: Material(
+        child: Row(
+          children: [
+            isSmall
+                ? const SizedBox()
+                : Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 60, left: 60, top: 20),
-                child: ListView(
-                  children: [
-                    HeaderWidget(theme: theme),
-                    const SizedBox(height: 20),
-                    AboutWidget(theme: theme),
-                    const SizedBox(height: 20),
-                    WorkWidget(theme: theme),
-                    const SizedBox(height: 20),
-                    EducationWidget(theme: theme),
-                    const SizedBox(height: 20),
-                    SkillsWidget(theme: theme),
-                    const SizedBox(height: 20),
-                    ProjectsWidget(theme: theme, isSmall: isSmall),
-                  ],
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 60, left: 60, top: 20),
+                  child: ListView(
+                    children: [
+                      HeaderWidget(theme: theme),
+                      AboutWidget(theme: theme),
+                      WorkWidget(theme: theme),
+                      EducationWidget(theme: theme),
+                      SkillsWidget(theme: theme),
+                      ProjectsWidget(theme: theme, isSmall: isSmall),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          isSmall
-              ? const SizedBox()
-              : Expanded(
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: Colors.white,
+            isSmall
+                ? const SizedBox()
+                : Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-        ],
+          ],
+        ),
       ),
     );
   }

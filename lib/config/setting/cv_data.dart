@@ -19,7 +19,7 @@ MyData myData = MyData(
       locationX: "",
       locationY: "",
     ),
-    phone: Phone(code: "+20", phone: "1032390247"),
+    phone: Phone(code: "+20", number: "1032390247"),
     email: "eslamelezaby98@gmail.com",
     links: [
       Links(
@@ -49,14 +49,43 @@ MyData myData = MyData(
     title: "Work Experience",
     works: [
       Works(
-        companyName: companyName,
-        country: country,
-        type: type,
-        jobTitle: jobTitle,
-        start: start,
-        end: end,
-        companySite: companySite,
-        description: description,
+        companyName: "Stoork",
+        country: "Turkey",
+        type: "Remote",
+        jobTitle: "Mobile App Developer",
+        start: "2023",
+        end: "Present",
+        companySite: "",
+        description:
+            "I played a pivotal role in creating and maintaining mobile applications for Stork company. Working"
+            "remotely, I effectively collaborated with cross-functional teams to deliver high-quality mobile applications"
+            "and contribute to the success of various projects",
+      ),
+      Works(
+        companyName: "ECMPP",
+        country: "Egypt",
+        type: "Full Time",
+        jobTitle: "Mobile App Developer",
+        start: "2022",
+        end: "2024",
+        companySite: "https://www.ecmpp.com/#/home",
+        description:
+            " Implemented UI/UX designs, translating wireframes and mockups into interactive and visually appealing"
+            "mobile interfaces. We integrated RESTful APIs to fetch and display real-time dynamic data, improving application"
+            "functionality and user experience.",
+      ),
+      Works(
+        companyName: "Freelancer",
+        country: "",
+        type: "Freelancer",
+        jobTitle: "Mobile App Developer",
+        start: "2020",
+        end: "2022",
+        companySite: "https://www.freelancer.com/",
+        description:
+            "Collaborated closely with clients to understand project requirements, translate concepts into technical"
+            " specifications, and provide regular progress updates. Actively engaged in client communication, addressing feedback, and incorporating requested changes"
+            " to meet their specific requirements.",
       ),
     ],
   ),
@@ -75,11 +104,58 @@ MyData myData = MyData(
     title: "Projects",
     items: [
       ProjectItem(
-        name: name,
-        link: link,
-        googlePlay: googlePlay,
-        appStore: appStore,
-        description: description,
+        name: "Zone",
+        link: "",
+        googlePlay:
+            "https://play.google.com/store/apps/details?id=com.ecmpp.zone.app",
+        appStore: "https://apps.apple.com/us/app/zone-office/id6446050733",
+        description:
+            "Zone is more than just an app; it's your engineering partner. It simplifies the process, saves you time and resources, and gives you the confidence to bring your ideas to life.",
+        badgets: [
+          "Firebase",
+          "API",
+          "Agora",
+          "Pusher",
+        ],
+      ),
+      ProjectItem(
+        name: "Zone",
+        link: "",
+        googlePlay: "",
+        appStore: "",
+        description: "",
+        badgets: [],
+      ),
+      ProjectItem(
+        name: "Zone",
+        link: "",
+        googlePlay: "",
+        appStore: "",
+        description: "",
+        badgets: [],
+      ),
+      ProjectItem(
+        name: "Zone",
+        link: "",
+        googlePlay: "",
+        appStore: "",
+        description: "",
+        badgets: [],
+      ),
+      ProjectItem(
+        name: "Zone",
+        link: "",
+        googlePlay: "",
+        appStore: "",
+        description: "",
+        badgets: [],
+      ),
+      ProjectItem(
+        name: "Zone",
+        link: "",
+        googlePlay: "",
+        appStore: "",
+        description: "",
         badgets: [],
       ),
     ],

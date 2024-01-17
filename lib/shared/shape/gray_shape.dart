@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BuildGrayShape extends StatelessWidget {
-  const BuildGrayShape({super.key, required this.theme});
+class BuildBadget extends StatelessWidget {
+  const BuildBadget({
+    super.key,
+    required this.theme,
+    required this.text,
+  });
   final ThemeData theme;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class BuildGrayShape extends StatelessWidget {
           vertical: 4,
         ),
         child: Text(
-          "Remote",
+          text,
           style: theme.textTheme.displaySmall,
         ),
       ),

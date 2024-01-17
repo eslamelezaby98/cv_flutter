@@ -1,5 +1,6 @@
+import 'package:cv_flutter/config/setting/cv_data.dart';
+import 'package:cv_flutter/shared/shape/gray_shape.dart';
 import 'package:flutter/material.dart';
-import '../../../config/data/dummy_data.dart';
 
 class WorkWidget extends StatelessWidget {
   const WorkWidget({super.key, required this.theme});
@@ -10,14 +11,15 @@ class WorkWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(DummyData.work, style: theme.textTheme.bodyLarge),
+        Text(myData.workExperience.title, style: theme.textTheme.bodyLarge),
         const SizedBox(height: 5),
         ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: 4,
+          itemCount: myData.workExperience.works.length,
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
+            var work = myData.workExperience.works[index];
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Column(
@@ -29,67 +31,31 @@ class WorkWidget extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              "VMWare",
+                              work.companyName,
                               style: theme.textTheme.bodySmall,
                             ),
                             const SizedBox(width: 5),
-                            Card(
-                              color: const Color(0xffF8F8FA),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide.none,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 4,
-                                ),
-                                child: Text(
-                                  "USA",
-                                  style: theme.textTheme.displaySmall,
-                                ),
-                              ),
-                            ),
-                            Card(
-                              color: const Color(0xffF8F8FA),
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide.none,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 4,
-                                ),
-                                child: Text(
-                                  "Remote",
-                                  style: theme.textTheme.displaySmall,
-                                ),
-                              ),
-                            ),
+                            BuildBadget(theme: theme, text: work.country),
+                            BuildBadget(theme: theme, text: work.type),
                           ],
                         ),
                       ),
                       Text(
-                        "12/2021 - 06/2023",
+                        "${work.start}- ${work.end}",
                         style: theme.textTheme.bodyMedium,
                       ),
                     ],
                   ),
                   const SizedBox(height: 2),
-
-                  //* job title
-                  Text(
-                    "Cloud Engineer",
-                    style: theme.textTheme.displayLarge,
-                  ),
+                  Text(work.jobTitle, style: theme.textTheme.displayLarge),
                   const SizedBox(height: 2),
-                  Text(DummyData.aboutValue, style: theme.textTheme.bodyMedium),
+                  Text(work.description, style: theme.textTheme.bodyMedium),
                 ],
               ),
             );
           },
-        )
+        ),
+        const SizedBox(height: 20),
       ],
     );
   }

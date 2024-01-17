@@ -1,3 +1,4 @@
+import 'package:cv_flutter/config/setting/cv_data.dart';
 import 'package:flutter/material.dart';
 
 class EducationWidget extends StatelessWidget {
@@ -9,13 +10,14 @@ class EducationWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Education", style: theme.textTheme.bodyLarge),
+        Text(myData.education.title, style: theme.textTheme.bodyLarge),
         ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: 2,
+          itemCount: myData.education.items.length,
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
+            var item = myData.education.items[index];
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Column(
@@ -25,25 +27,26 @@ class EducationWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Maharishi University of Management",
+                        item.universityName,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        "12/2021 - 06/2023",
+                        "${item.start} - ${item.end}",
                         style: theme.textTheme.bodyMedium,
                       ),
                     ],
                   ),
                   const SizedBox(height: 5),
                   Text(
-                    "Master's Degree in Computer Science",
+                    item.specialization,
                     style: theme.textTheme.bodyMedium,
                   ),
                 ],
               ),
             );
           },
-        )
+        ),
+        const SizedBox(height: 20),
       ],
     );
   }
