@@ -9,6 +9,8 @@ class ProjectItem {
   final String name;
   final String link;
   final String googlePlay;
+  final String macOS;
+  final String windows;
   final String appStore;
   final String description;
   final List<String> badgets;
@@ -20,6 +22,7 @@ class ProjectItem {
     required this.appStore,
     required this.description,
     required this.badgets,
+    required this.macOS,
+    required this.windows,
   });
 }
-

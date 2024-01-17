@@ -105,7 +105,7 @@ MyData myData = MyData(
     items: [
       ProjectItem(
         name: "Zone",
-        link: "",
+        link: "https://zone.ecmpp.com/",
         googlePlay:
             "https://play.google.com/store/apps/details?id=com.ecmpp.zone.app",
         appStore: "https://apps.apple.com/us/app/zone-office/id6446050733",
@@ -116,47 +116,44 @@ MyData myData = MyData(
           "API",
           "Agora",
           "Pusher",
+          "Flutter",
+        ],
+        macOS: "",
+        windows: "",
+      ),
+      ProjectItem(
+        name: "ECMPP",
+        link: "https://ecmpp.com/#/home",
+        googlePlay:
+            "https://apps.apple.com/us/app/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9-%D9%85%D9%83%D8%AA%D8%A8%D9%83-%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A/id1624253518",
+        macOS: "https://apps.apple.com/us/app/ecmpp/id644363585",
+        windows:
+            "https://apps.microsoft.com/detail/9P671ZNDG1ZX?hl=ar-sa&gl=US",
+        appStore: "https://apps.apple.com/us/app/ecmpp/id6443635857",
+        description:
+            "ECMPP is a revolutionary app designed to empower ERP engineers with the ultimate content management muscle.",
+        badgets: [
+          "Flutter",
+          "Firebase",
+          "Google Drive",
+          "API",
+          "Agora",
         ],
       ),
       ProjectItem(
-        name: "Zone",
-        link: "",
-        googlePlay: "",
+        name: "Trendwey",
+        link: "https://trendwey.com/#/",
+        googlePlay:
+            "https://play.google.com/store/apps/details?id=com.stork.trendweyApp",
         appStore: "",
-        description: "",
-        badgets: [],
-      ),
-      ProjectItem(
-        name: "Zone",
-        link: "",
-        googlePlay: "",
-        appStore: "",
-        description: "",
-        badgets: [],
-      ),
-      ProjectItem(
-        name: "Zone",
-        link: "",
-        googlePlay: "",
-        appStore: "",
-        description: "",
-        badgets: [],
-      ),
-      ProjectItem(
-        name: "Zone",
-        link: "",
-        googlePlay: "",
-        appStore: "",
-        description: "",
-        badgets: [],
-      ),
-      ProjectItem(
-        name: "Zone",
-        link: "",
-        googlePlay: "",
-        appStore: "",
-        description: "",
-        badgets: [],
+        description:
+            "An e-commerce app is a mobile application that allows users to buy and sell products online.",
+        badgets: [
+          "Flutter",
+          "API",
+        ],
+        macOS: "",
+        windows: "",
       ),
     ],
   ),
