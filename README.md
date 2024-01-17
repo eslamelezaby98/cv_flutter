@@ -5,11 +5,11 @@ Following the Guillermo Rauch approach, I tried to create a website similar to h
 
 All you need to do is:
 
-Modify the data in the file "lib/config/setting/cv_data.dart."
-Change the avatar image to "assets/images/avatar.jpg."
-Update the website name in "lib/config/setting/app_setting.dart."
-Run flutter build web.
-Deploy the project.
+- Modify the data in the file "lib/config/setting/cv_data.dart."
+- Change the avatar image to "assets/images/avatar.jpg."
+- Update the website name in "lib/config/setting/app_setting.dart."
+- Run flutter build web.
+- Deploy the project.
 
 My site: https://eslamelezaby.netlify.app/
 
